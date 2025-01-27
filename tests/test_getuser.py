@@ -21,7 +21,7 @@ def test_create_user(apis):
     }
     response=apis.post('users',user_data)
     print("Boddy",response.json())
-    #print("id is:",response.json()['id'])
+    print("id is:",response.json()['id'])
     assert response.status_code==201,"status code should be 201"
     assert response.json()['name']=="Kiran"
     assert response.json()['username']=="QA"
